@@ -3,17 +3,21 @@
 ## Objectives
 - Practice programming a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html).
 - Practice operations on GPIO pins.
-- Get familiar with [coding tools](https://docs.micropython.org/en/latest/library/rp2.html).
+- Get familiar with [coding languages](https://docs.micropython.org/en/latest/library/rp2.html).
 
 ## Requirements:
 Please complete the two python scripts prepared in this repository. Verify the required functionalities.
+> [!TIP]
+> Refer to the [examples](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf).
 
 ### (40%) LED Dimmer
-Work in [fade_in_fade_out.py](/fade_in_fade_out.py) and realize following effect on an LED.
-Repeat the process of gradually increasing and decreasing the brightness of an LED using Raspberry Pi Pico.
+Work in [fade_in_fade_out.py](/fade_in_fade_out.py) and realize endlessly repeating fade-in and fade-out effect on an LED.
 - (10%) Ramp up the brightness of the LED in 2 seconds.
 - (10%) Ramp down the brightness of the LED in 1 seconds.
 - (20%) Repeat previous two steps **forever**.
+> [!TIP]
+> Plan the duty cycle in/(de)crement together with the period .
+
 
 **Tips**: 
 - To create an increasing sequence: `range(n)`. To create a decreasing sequence: `reversed(range(n))`
