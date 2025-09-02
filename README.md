@@ -1,14 +1,18 @@
-# Raspberry Pi Pico Practice
-In this assignment, you'll practice programming a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#raspberry-pi-pico-and-pico-h) micro-controller using [MicroPython](https://micropython.org/).
+# Coding on Raspberry Pi Pico
+
+## Objectives
+- Practice programming a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html).
+- Practice operations on GPIO pins.
+- Get familiar with [coding tools](https://docs.micropython.org/en/latest/library/rp2.html).
 
 ## Requirements:
 Please complete the two python scripts prepared in this repository. Verify the required functionalities.
-**Note: if any generative AI been used, state in this [document](/README.md) or drop comments in your script.** 
 
-### (40%) [`fade_in_fade_out.py`](/fade_in_fade_out.py)
+### (40%) LED Dimmer
+Work in [fade_in_fade_out.py](/fade_in_fade_out.py) and realize following effect on an LED.
 Repeat the process of gradually increasing and decreasing the brightness of an LED using Raspberry Pi Pico.
 - (10%) Ramp up the brightness of the LED in 2 seconds.
-- (10%) Ramp down the brightness of the LED in 1 seconds. 
+- (10%) Ramp down the brightness of the LED in 1 seconds.
 - (20%) Repeat previous two steps **forever**.
 
 **Tips**: 
