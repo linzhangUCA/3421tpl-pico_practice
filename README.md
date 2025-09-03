@@ -20,12 +20,12 @@ Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeat fad
 > [!TIP]
 > Plan duty cycle increment size, number of increments with restriction of time to achieve a **smooth** fading effect.
 
-#### 1.2 (60%) Mode Switching LED
+#### 1.2 (50%) Mode Switching LED
 Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's working mode.
 - (15%) **Mode 1**: LED (endlessly) fade in and fade out with a frequency of 1/4 Hz (equally allocate fade-in and fade-out time). 
 - (5%) **Mode 2**: LED **constantly on**.
-- (20%) Press (and release) the button to switch between the modes (DO NOT make it a one-time thing). 
-- (20%) Mode switching happens **instantaneously** at the moment the button is released.
+- (15%) Press and **release** the button to switch mode (DO NOT make it a one-time thing). 
+- (15%) Mode switching happens **instantaneously** at the moment the button is released.
 > [!IMPORTANT]
 > Use [IRQ](https://docs.micropython.org/en/latest/library/machine.Pin.html#machine.Pin.irq) to interrupt main task and handle button released event.
 
@@ -36,7 +36,16 @@ Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's w
 > - Interrupt [tutorial](https://randomnerdtutorials.com/raspberry-pi-pico-interrupts-micropython/).
 > - [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 
-### 2 (10%) Fading Scheduling
+### 2 (10%) Circuit Picture
+Upload a picture of your actual circuit and display it below 👇
+
+![wiring_pic](wiring.png)
+
+> [!WARNING]
+> The circuit picture has to be clear about Pico's GPIO pins connection with the LED and the button.
+> The circuit has to be matching your code, or the credits for coding won't be redeemed.
+
+### 3 (10%) Fading Scheduling
 Let's formulate fading effect in coding exercises with math language. 
 Let $T$ represent time required for ramping brightness of the LED from one extremity to another.
 And $n$ indicates number of duty cycle increments in the period of $T$.
