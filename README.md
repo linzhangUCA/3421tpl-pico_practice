@@ -18,7 +18,7 @@ Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeat fad
 - (15%) Ramp up the brightness of an LED (from off to maximum) in **2 seconds**.
 - (15%) Ramp down the brightness of the LED in **1 seconds**.
 > [!TIP]
-> Plan duty cycle increment size, number of increments with restriction of time.
+> Plan duty cycle increment size, number of increments with restriction of time to achieve a **smooth** fading effect.
 
 #### 1.2 (60%) Mode Switching LED
 Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's working mode.
