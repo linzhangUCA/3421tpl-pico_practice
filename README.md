@@ -22,9 +22,9 @@ Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeating 
 
 #### 1.2 (60%) Mode Switching LED
 Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's working mode.
-- (15%) **Mode 1**: LED (endlessly) fade in and fade out. 
+- (15%) **Mode 1**: LED (endlessly) fade in and fade out with a frequency of 1/4 Hz (equally allocate fade-in and fade-out time). 
 > [!IMPORTANT]
-> Set fade-in and fade-out frequency to 1/4 Hz. Please equally allocate fade-in and fade-out time. 
+> Please use 1024 steps to fade LED brightness from one extremity to another. 
 - (5%) **Mode 2**: LED **constantly on**.
 - (20%) Press (and release) the button to switch between the modes (DO NOT make it a one-time thing). 
 - (20%) Mode switching happens **instantaneously** at the moment the button is released.
@@ -39,7 +39,7 @@ Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's w
 > - [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 
 ### 2 (10%) Fading Scheduling
-Let's formulate coding exercise 1 with math language. 
+Let's formulate fading effect in coding exercises with math language. 
 Let $T$ represent time required for ramping brightness of the LED from one extremity to another.
 And $n$ indicates number of duty cycle increments in the period of $T$.
 Use $D_{max}$ as the maximal value for PWM signal's duty cycle.
