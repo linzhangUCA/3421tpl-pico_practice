@@ -1,45 +1,51 @@
 # Coding on Raspberry Pi Pico
 
 ## Objectives
-- Practice programming a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html).
-- Practice operations on GPIO pins.
-- Get familiar with [coding languages](https://docs.micropython.org/en/latest/library/rp2.html).
+- Program a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html).
+- Manipulate GPIO pins to
+  - output PWM signal
+  - call interrupt on changed input signal
+- Learn math formatting with Github Markdown. 
 
 ## Requirements:
-Please complete the two python scripts prepared in this repository. Verify the required functionalities.
+### 1 Coding Exercises
+Complete following 2 exercises to realize required effects on the hardware.
 > [!TIP]
-> Refer to the [examples](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf).
+> Refer to the [slides](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf) with examples.
 
-### (40%) LED Dimmer
-Work in [fade_in_fade_out.py](/fade_in_fade_out.py) and realize endlessly repeating fade-in and fade-out effect on an LED.
-- (10%) Ramp up the brightness of the LED in 2 seconds.
-- (10%) Ramp down the brightness of the LED in 1 seconds.
-- (20%) Repeat previous two steps **forever**.
+#### 1.1 (30%) LED Dimmer
+Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeating fade-in and fade-out effect on an LED.
+- (15%) Ramp up the brightness of an LED (from off to maximum) in **2 seconds**.
+- (15%) Ramp down the brightness of the LED in **1 seconds**.
 > [!TIP]
-> Plan the duty cycle in/(de)crement together with the period .
+> Plan duty cycle increment size, number of increments with restriction of time.
 
+#### 1.2 (60%) Mode Switching LED
+Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's working mode.
+- (15%) **Mode 1**: LED (endlessly) fade in and fade out. 
+> [!IMPORTANT]
+> Set fade-in and fade-out frequency to 1/4 Hz. Please equally allocate fade-in and fade-out time. 
+- (5%) **Mode 2**: LED **constantly on**.
+- (20%) Press (and release) the button to switch between the modes (DO NOT make it a one-time thing). 
+- (20%) Mode switching happens **instantaneously** at the moment the button is released.
+> [!IMPORTANT]
+> Use [IRQ](https://docs.micropython.org/en/latest/library/machine.Pin.html#machine.Pin.irq) to interrupt main task and handle button released event.
 
-**Tips**: 
-- To create an increasing sequence: `range(n)`. To create a decreasing sequence: `reversed(range(n))`
-- Maximum PWM duty cycle is `65025`.
-- `for` loop is optional.
+> [!TIP]
+> - `for` loop is not recommended. 
+> - Plan a cycle of actions in a very short period of time (e.g. 10 milliseconds).
+> - Need to store mode value in a `global` variable? Check this [guide](https://www.w3schools.com/python/python_variables_global.asp).
+> - Interrupt [tutorial](https://randomnerdtutorials.com/raspberry-pi-pico-interrupts-micropython/).
+> - [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 
-### (60%) [`switch_mode.py`](/switch_mode.py)
-Make an LED running under two modes. Use a button to switch the mode.
-- (12%) **Mode 1**: set the LED to **endlessly** fade in and fade out. Please equally allocate fade-in and fade-out time. Set the frequency to 1/4 Hz.
-- (8%) **Mode 2**: set the LED to **constantly on**.
-- (20%) Press (and release) the button to switch between the modes. This function is expected to be valid all the time. **DO NOT make it a one-time thing**.
-- (20%) Mode switching happens **instantaneously**.
+### 2 (10%) Fading Scheduling
+Let's formulate coding exercise 1 with math language. 
+Let $T$ represent time required for ramping brightness of the LED from one extremity to another.
+And $n$ indicates number of duty cycle increments in the period of $T$.
+Use $D_{max}$ as the maximal value for PWM signal's duty cycle.
+Please write out the equation of the duty cycle's **increment** value, $s$, below :point_down:
 
-**Tips**: 
-- Try to plan actions in a very short period of time (e.g. 10 milliseconds).
-- Try to switch mode with [interrupt](https://www.upesy.com/blogs/tutorials/hardware-interrupts-rpi-pico-on-micropython?srsltid=AfmBOooNL06A7YB1HmKTClu3PhqEixfZSOmMBzPt_Qr6z3RMDosgF3Pl) mechanism.
-- Can't switch mode in irq handling function? You may need help from [global variable](https://www.w3schools.com/python/python_variables_global.asp).
-- Using `for` loop could be a bad choice. 
-- You can either start with **Mode 1** or **Mode 2**.
- 
-## Further Instructions
-- You can use the built-in LED or an external LED.
-- Solderless breadboard is optional.
-- Refer to the wiring diagrams in this [tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/6).
-- For more details on coding Raspberry Pi Pico using Micropython, refer to the official [handbook](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf?_gl=1*1ydsxhc*_ga*NjEyNDE4MjQ3LjE3MjUwNTIzMzE.*_ga_22FD70LWDS*MTcyNTQ4NTEyMy4zLjEuMTcyNTQ4NTIyOC4wLjAuMA..).
+> Type equation with LaTex syntax here.
+
+> [!TIP]
+> Writing mathematical expressions [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
