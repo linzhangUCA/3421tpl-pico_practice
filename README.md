@@ -5,7 +5,7 @@
 - Manipulate GPIO pins to
   - output PWM signal
   - call interrupt on changed input signal
-- Learn math formatting with Github Markdown. 
+- Write math equation with Github Markdown. 
 
 ## Requirements:
 ### 1 Coding Exercises
