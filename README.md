@@ -1,4 +1,4 @@
-# Coding on Raspberry Pi Pico
+# Coding Raspberry Pi Pico
 
 ## Objectives
 - Program a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html).
@@ -10,8 +10,8 @@
 ## Requirements:
 ### 1 Coding Exercises
 Complete following 2 exercises to realize required effects on the hardware.
-> [!TIP]
-> Refer to the [slides](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf) with examples.
+> [!NOTE]
+> Please acknowledge AI's contributions according to the policies in the [syllabus](https://linzhanguca.github.io/_docs/robotics1-2025/syllabus.pdf)
 
 #### 1.1 (30%) LED Dimmer
 Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeat fade-in and fade-out effect on an LED.
@@ -47,3 +47,6 @@ Please write out the equation of the duty cycle's **increment** value, $s$, belo
 
 > [!TIP]
 > Writing mathematical expressions [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+
+> [!NOTE]
+> Please acknowledge AI's contributions according to the policies in the [syllabus](https://linzhanguca.github.io/_docs/robotics1-2025/syllabus.pdf)
