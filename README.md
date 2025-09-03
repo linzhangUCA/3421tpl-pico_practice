@@ -23,7 +23,7 @@ Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeat fad
 #### 1.2 (50%) Mode Switching LED
 Complete [switch_mode.py](/switch_mode.py) and use a button to switch an LED's working mode.
 - (15%) **Mode 1**: LED (endlessly) fade in and fade out with a frequency of 1/4 Hz (equally allocate fade-in and fade-out time). 
-- (5%) **Mode 2**: LED **constantly on**.
+- (5%) **Mode 2**: LED be **constantly on**.
 - (15%) Press and **release** the button to switch mode (DO NOT make it a one-time thing). 
 - (15%) Mode switching happens **instantaneously** at the moment the button is released.
 > [!IMPORTANT]
