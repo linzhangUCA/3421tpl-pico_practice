@@ -14,7 +14,7 @@ Complete following 2 exercises to realize required effects on the hardware.
 > Refer to the [slides](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf) with examples.
 
 #### 1.1 (30%) LED Dimmer
-Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeating fade-in and fade-out effect on an LED.
+Complete [fade_in_fade_out.py](/fade_in_fade_out.py) to **endlessly** repeat fade-in and fade-out effect on an LED.
 - (15%) Ramp up the brightness of an LED (from off to maximum) in **2 seconds**.
 - (15%) Ramp down the brightness of the LED in **1 seconds**.
 > [!TIP]
