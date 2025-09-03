@@ -43,7 +43,7 @@ Upload a picture of your actual circuit and display it below 👇
 
 > [!WARNING]
 > The circuit picture has to be clear about Pico's GPIO pins connection with the LED and the button.
-> The circuit has to be matching your code, or the credits for coding won't be redeemed.
+> The circuit has to match your code, or the coding credits won't be redeemed.
 
 ### 3 (10%) Fading Scheduling
 Let's formulate fading effect in coding exercises with math language. 
@@ -56,6 +56,7 @@ Please write out the equation of the duty cycle's **increment** value, $s$, belo
 
 > [!TIP]
 > Writing mathematical expressions [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+> LaTex math [cheat sheet](https://tug.ctan.org/info/undergradmath/undergradmath.pdf) for undergrads
 
 > [!NOTE]
 > Please acknowledge AI's contributions according to the policies in the [syllabus](https://linzhanguca.github.io/_docs/robotics1-2025/syllabus.pdf)
