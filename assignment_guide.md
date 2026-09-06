@@ -12,17 +12,17 @@ In this assignment, you will
 
 ## 2. Requirements
 
-### 2.1. (60%) Show off your build
-- (40%) Upload four distinct photographs of your mobile base.
-  1. (10%) Portrait / Feature Shot: Choose the angle that best highlights your build.
-  2. (10%) Top View: Camera positioned directly overhead, facing straight down.
-  3. (10%) Front View: Camera positioned directly in front, facing straight to the head.
-  4. (10%) Side View: A clear profile shot from either the left or right side.
-- (10%) Images must be scaled to 600 × 800 pixels (vertical orientation) or 800 × 600 pixels (horizontal orientation).
-- (10%) Render all four images properly in [README](/README.md)
+### 2.1. (15%) Wiring Up Pico and Peripherals
+Wire up the the circuit as shown in the diagram below.
+- (5%) Take a picture of your physical circuit and display it in [README](README.md).
+- (8%) Images must be scaled to 800 × 600 pixels with a horizontal orientation.
+- (2%) Please organize your circuit and reveal the connections with a clear view (position camera aptly and do not obscure key connections).
 
-> [!TIP]
-> Replacing the dummy files in the [images](/images/) directory using the same filenames will automatically update your [README](README.md) image links and save you time.
+![wiring_diagram](/assets/images/wiring_diagram.png)
+
+### 2.2. (60%) Breathing LED
+Complete the coding tasks. 
+- 
 
 ### 2.2. (20%) Observe and log the rail test
 Observe closely and record your observations from the rail test directly in the designated section of [README](/README.md).
