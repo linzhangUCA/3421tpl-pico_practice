@@ -6,7 +6,7 @@ In Robotics I, a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/m
 Let's get a head start on the course by practicing basic hardware wiring and coding with the Pico 2 board.
 
 In this assignment, you will
-- Practice wiring a basic electronic circuit.
+- Set up a basic electronic circuit.
 - Practice programming GPIO pins of the Pico 2 board.
 - Familiarize pulse with modulation (PWM), timer, and interrupt. 
 - Document math expressions.
@@ -22,9 +22,14 @@ Wire up the the circuit as shown in the diagram below.
 ![wiring_diagram](/assets/images/wiring_diagram.png)
 
 ### 2.2. (60%) Two LEDs
-Complete the coding tasks, so the green LED breaths (fade in fade out) and the red LED blinks.
-1. 
-  - Have the green LED blinking at the frequency of 5 Hz
+Complete the coding tasks in [glow_leds.py](glow_leds.py), so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
+- Green LED (**Breathing**): Implement an infinite breathing cycle using [`machine.PWM`](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
+  Fade in smoothly over 2.0 seconds ($0% to 100% duty cycle) and fade out over 1.0 second (100% to 0% duty cycle).
+- Red LED (**Blinking**): Blink continuously at 5 Hz.
+- Control at least one LED using a MicroPython [`machine.Timer`](https://docs.micropython.org/en/latest/rp2/quickref.html#timers) callback.
+  Both LEDs must operate at the same time without blocking each other.
+- (+5% Bonus) Drive the Green LED's PWM brightness updates entirely inside a `Timer` callback.
+- (+5% Bonus) Use two separate `Timer` instances (one dedicated to the Green LED and one to the Red LED) to eliminate standard loops completely.
 
 ### 2.2. (20%) Observe and log the rail test
 Observe closely and record your observations from the rail test directly in the designated section of [README](/README.md).
