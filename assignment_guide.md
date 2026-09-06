@@ -6,6 +6,7 @@ In Robotics I, a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/m
 Let's get a head start on the course by practicing basic hardware wiring and coding with the Pico 2 board.
 
 In this assignment, you will
+- Practice wiring a basic electronic circuit.
 - Practice programming GPIO pins of the Pico 2 board.
 - Familiarize pulse with modulation (PWM), timer, and interrupt. 
 - Document math expressions.
@@ -20,9 +21,10 @@ Wire up the the circuit as shown in the diagram below.
 
 ![wiring_diagram](/assets/images/wiring_diagram.png)
 
-### 2.2. (60%) Breathing LED
-Complete the coding tasks. 
-- 
+### 2.2. (60%) Two LEDs
+Complete the coding tasks, so the green LED breaths (fade in fade out) and the red LED blinks.
+1. 
+  - Have the green LED blinking at the frequency of 5 Hz
 
 ### 2.2. (20%) Observe and log the rail test
 Observe closely and record your observations from the rail test directly in the designated section of [README](/README.md).
