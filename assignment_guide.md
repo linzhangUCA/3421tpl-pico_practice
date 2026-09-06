@@ -21,20 +21,25 @@ Wire up the the circuit as shown in the diagram below.
 
 ![wiring_diagram](/assets/images/wiring_diagram.png)
 
-### 2.2. (60%) Two LEDs
-Complete the coding tasks in [glow_leds.py](glow_leds.py), so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
+### 2.2. (40%) Light Up LEDs
+Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
 - Green LED (**Breathing**): Implement an infinite breathing cycle using [`machine.PWM`](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
-  Fade in smoothly over 2.0 seconds ($0% to 100% duty cycle) and fade out over 1.0 second (100% to 0% duty cycle).
+  Fade in (0% brightness to 100%) smoothly over 2.0 seconds and fade out (100% brightness to 0%) over 1.0 second.
 - Red LED (**Blinking**): Blink continuously at 5 Hz.
 - Control at least one LED using a MicroPython [`machine.Timer`](https://docs.micropython.org/en/latest/rp2/quickref.html#timers) callback.
   Both LEDs must operate at the same time without blocking each other.
 - (+5% Bonus) Drive the Green LED's PWM brightness updates entirely inside a `Timer` callback.
 - (+5% Bonus) Use two separate `Timer` instances (one dedicated to the Green LED and one to the Red LED) to eliminate standard loops completely.
 
-### 2.2. (20%) Observe and log the rail test
-Observe closely and record your observations from the rail test directly in the designated section of [README](/README.md).
+### 2.3. (40%) Switch Display Mode
+Complete the coding tasks in [switch_mode.py](switch_mode.py) to control the $\color{green}{\text{green}}$ LED across two operational modes using a pushbutton .
+- Mode 1 (Breathing): Green LED continuously fades in over 2.0 seconds and fades out over 2.0 seconds using [PWM](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
+- Mode 2 (Solid on): Green LED glows continuously at 100% brightness.
+- Configure an interrupt ([`Pin.irq()`](https://docs.micropython.org/en/latest/library/machine.Pin.html#machine.Pin.irq)) on the pushbutton GPIO pin to handle state toggling via an Interrupt Service Routine (ISR) callback function.
+- Mode switching must trigger upon releasing the button.
+- LED modes must execute smoothly without stalling or preventing hardware interrupt detection.
 
-### 2.3. (10%) Analyze the rail test
+### 2.4. (10%) Plan Breathing Schedule for LED 
 Answer all post-test analysis questions in [README](/README.md) based on the observed result of your rail test.
 
 ### (10%) 2.4. Please acknowledge AI's contributions.
@@ -43,6 +48,3 @@ If you used generative AI tools during this assignment (e.g., for Markdown forma
 - State which tool was used and briefly describe how it assisted you.
 - If no AI tools were used, explicitly state: "No AI tools were utilized for this assignment."
 
-## 3. Reading Resources
-- [Github documentation syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Engineering drawing views reference](https://engineering.stackexchange.com/questions/15885/top-view-front-view-left-view-and-right-view-help)
