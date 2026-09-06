@@ -6,18 +6,11 @@ In Robotics I, a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/m
 Let's get a head start on the course by practicing basic hardware wiring and coding with the Pico 2 board.
 
 In this assignment, you will
-- Get your hands dirty and assemble a rudimentary mobile base.
-- Familiarize yourself with GitHub and Classroom 50 for project management. 
-- Document engineering progress using Markdown.
-- Practice engineering reading skills by following technical specifications.
-- (Optional) Responsibly leverage AI tools to assist with troubleshooting or formatting.
-
-Please follow the [Requirements](#2-requirements) to redeem your first credit.
+- Practice programming GPIO pins of the Pico 2 board.
+- Familiarize pulse with modulation (PWM), timer, and interrupt. 
+- Document math expressions.
 
 ## 2. Requirements
-Complete the mobile base assembly and perform the rail test before proceeding with your documentation.
-> [!CAUTION]
-> Instructor Verification Required: Rail tests performed without an instructor present as a witness will not be graded.
 
 ### 2.1. (60%) Show off your build
 - (40%) Upload four distinct photographs of your mobile base.
