@@ -21,7 +21,15 @@ Wire up the the circuit as shown in the diagram below.
 
 ![wiring_diagram](/assets/images/wiring_diagram.png)
 
-### 2.2. (40%) Light Up LEDs
+### 2.2. (10%) Plan Breathing Schedule for LED 
+Before coding the Pico, it is always recommended to plan ahead. 
+Let's formulate an LED's breathing effect (fade in and out) with math language to better support the coding later. 
+Let $T$ represent time required for ramping an LED's brightness from one extremity to another (0% to 100% or 100% to 0%).
+And $n$ indicates number of duty cycle changes in the period of $T$.
+Use $D_{max}$ as the maximal value for PWM signal's duty cycle.
+Please write out the equation of the duty cycle's **increment** value, $s$.
+
+### 2.3. (40%) Light Up LEDs
 Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
 - Green LED (**Breathing**): Implement an infinite breathing cycle using [`machine.PWM`](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
   Fade in (0% brightness to 100%) smoothly over 2.0 seconds and fade out (100% brightness to 0%) over 1.0 second.
@@ -31,7 +39,7 @@ Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{
 - (+5% Bonus) Drive the Green LED's PWM brightness updates entirely inside a `Timer` callback.
 - (+5% Bonus) Use two separate `Timer` instances (one dedicated to the Green LED and one to the Red LED) to eliminate standard loops completely.
 
-### 2.3. (40%) Switch Display Mode
+### 2.4. (40%) Switch Display Mode
 Complete the coding tasks in [switch_mode.py](switch_mode.py) to control the $\color{green}{\text{green}}$ LED across two operational modes using a pushbutton .
 - Mode 1 (Breathing): Green LED continuously fades in over 2.0 seconds and fades out over 2.0 seconds using [PWM](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
 - Mode 2 (Solid on): Green LED glows continuously at 100% brightness.
@@ -39,11 +47,8 @@ Complete the coding tasks in [switch_mode.py](switch_mode.py) to control the $\c
 - Mode switching must trigger upon releasing the button.
 - LED modes must execute smoothly without stalling or preventing hardware interrupt detection.
 
-### 2.4. (10%) Plan Breathing Schedule for LED 
-Answer all post-test analysis questions in [README](/README.md) based on the observed result of your rail test.
-
-### (10%) 2.4. Please acknowledge AI's contributions.
-If you used generative AI tools during this assignment (e.g., for Markdown formatting or troubleshooting):
+### 2.5. (5%) Acknowledge AI's contributions.
+If AI helped with this assignment, please list its contributions below:
 - Add an AI Acknowledgment section at the bottom of your README.md.
 - State which tool was used and briefly describe how it assisted you.
 - If no AI tools were used, explicitly state: "No AI tools were utilized for this assignment."
