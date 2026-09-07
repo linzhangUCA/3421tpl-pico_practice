@@ -53,3 +53,8 @@ Complete the coding tasks in [switch_mode.py](switch_mode.py) to control the $\c
 
 ### 2.5. (5%) Acknowledge AI's contributions.
 If AI helped with this assignment, please list out all the contributions.
+
+## 3 Resouces
+> [!TIP]
+> - Writing mathematical expressions [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+> - LaTex math [cheat sheet](https://tug.ctan.org/info/undergradmath/undergradmath.pdf) for undergrads
