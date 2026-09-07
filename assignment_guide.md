@@ -31,7 +31,7 @@ To realize the breathing effect of an LED, We need to increment/decrement PWM du
 1. Write an equation for the total number of duty cycle updates, $n$, during the ramp period $T$ in terms of $f$ and $T$.
 2. Write an equation for the duty cycle step size, $\Delta D$, required for each update in terms of $D_{\text{max}}$, and $n$.
 
-### 2.3. (40%) Light Up LEDs
+### 2.3. (35%) Light Up LEDs
 Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
 - Green LED (**Breathing**): Implement an infinite breathing cycle using [`machine.PWM`](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
   Fade in (0% brightness to 100%) smoothly over 2.0 seconds and fade out (100% brightness to 0%) over 1.0 second.
@@ -41,13 +41,15 @@ Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{
 - (+5% Bonus) Drive the Green LED's PWM brightness updates entirely inside a `Timer` callback.
 - (+5% Bonus) Use two separate `Timer` instances (one dedicated to the Green LED and one to the Red LED) to eliminate standard loops completely.
 
-### 2.4. (40%) Switch Display Mode
+### 2.4. (35%) Switch Display Mode
 Complete the coding tasks in [switch_mode.py](switch_mode.py) to control the $\color{green}{\text{green}}$ LED across two operational modes using a pushbutton .
 - Mode 1 (Breathing): Green LED continuously fades in over 2.0 seconds and fades out over 2.0 seconds using [PWM](https://docs.micropython.org/en/latest/rp2/quickref.html#pwm-pulse-width-modulation).
 - Mode 2 (Solid on): Green LED glows continuously at 100% brightness.
 - Configure an interrupt ([`Pin.irq()`](https://docs.micropython.org/en/latest/library/machine.Pin.html#machine.Pin.irq)) on the pushbutton GPIO pin to handle state toggling via an Interrupt Service Routine (ISR) callback function.
 - Mode switching must trigger upon releasing the button.
 - LED modes must execute smoothly without stalling or preventing hardware interrupt detection.
+- (+10% Bonus) Realize mode switching with a pull-down button (No bonus if the circuit picture is not showing the correct wiring).
+
 
 ### 2.5. (5%) Acknowledge AI's contributions.
 If AI helped with this assignment, please list its contributions below:
