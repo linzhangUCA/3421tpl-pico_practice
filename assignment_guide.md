@@ -8,7 +8,7 @@ Let's get a head start on the course by practicing basic hardware wiring and cod
 In this assignment, you will
 - Set up a basic electronic circuit.
 - Practice programming GPIO pins of the Pico 2 board.
-- Familiarize pulse with modulation (PWM), timer, and interrupt. 
+- Familiarize Pulse Width Modulation (PWM), timer, and interrupt. 
 - Document math expressions.
 
 ## 2. Requirements
@@ -21,13 +21,15 @@ Wire up the the circuit as shown in the diagram below.
 
 ![wiring_diagram](/assets/images/wiring_diagram.png)
 
-### 2.2. (10%) Plan Breathing Schedule for LED 
-Before coding the Pico, it is always recommended to plan ahead. 
+### 2.2. (10%) Plan Breathing Schedule for an LED 
+Before coding, it is always recommended to plan ahead. 
 Let's formulate an LED's breathing effect (fade in and out) with math language to better support the coding later. 
-Let $T$ represent time required for ramping an LED's brightness from one extremity to another (0% to 100% or 100% to 0%).
-And $n$ indicates number of duty cycle changes in the period of $T$.
-Use $D_{max}$ as the maximal value for PWM signal's duty cycle.
-Please write out the equation of the duty cycle's **increment** value, $s$.
+To realize the breathing effect of an LED, We need to increment/decrement PWM duty cycle in a regular basis.
+  - Let $f$ (in Hz) be the update frequency (how many times per second the PWM duty cycle is adjusted).
+  - Let $T$ (in seconds) be the ramp duration required to shift brightness between extremes ($0\%$ to $100\%$ or $100\%$ to $0\%$).
+  - Let $D_{\text{max}}$ be the maximum integer value for the PWM duty cycle (e.g., $65535$ for 16-bit MicroPython PWM).
+1. Write an equation for the total number of duty cycle updates, $n$, during the ramp period $T$ in terms of $f$ and $T$.
+2. Write an equation for the duty cycle step size, $\Delta D$, required for each update in terms of $D_{\text{max}}$, and $n$.
 
 ### 2.3. (40%) Light Up LEDs
 Complete the coding tasks in [glow_leds.py](glow_leds.py) so the $\color{green}{\text{green}}$ and $\color{red}{\text{red}}$ LEDs run simultaneously.
